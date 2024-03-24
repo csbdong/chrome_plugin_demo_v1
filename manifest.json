@@ -1,0 +1,40 @@
+{
+    "name": "demo plugin name",
+    "version": "0.0.1",
+    "manifest_version": 2,
+  
+
+    "description": "demo description",
+    "icons": {
+      "16": "img/logo.jpeg",
+      "48": "img/logo2.jpeg"
+    },
+    
+    "default_locale": "en",
+  
+    
+    "browser_action": {
+      "default_title": "demo的标题",
+      "default_icon": "img/logo.jpeg",
+      "default_popup": "html/test.html"
+    },
+  
+    
+    "content_scripts": [
+      {
+        "js": ["script/test.js"],
+        
+        "matches": [
+          "http://*/*",
+          "https://*/*"
+        ],
+        
+        "run_at": "document_start"
+      }
+    ],
+    
+    "permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
